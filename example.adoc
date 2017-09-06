@@ -23,12 +23,12 @@ This is a separate paragraph.
 
 == Example Usage
 
-[source,bash]
-.create a pdf for this document
+[source,shell]
+.create html and pdf docs from this source file:
 ----
-[docker-host]$ cd docs
-
-[docker-host]$ docker run -it -v $(pwd):/documents dd asciidoctor-pdf thisdoc.adoc
+$ make
+docker run -it -v /Users/mack/src/ascii-easydocker:/docs/ alpdoc asciidoctor-pdf example.adoc
+docker run -it -v /Users/mack/src/ascii-easydocker:/docs/ alpdoc     asciidoctor example.adoc
 ----
 
 == Appendix
