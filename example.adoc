@@ -1,0 +1,49 @@
+= AsciiDoctor in Docker Example
+by Dan Mack <mack@macktronics.com>
+v1.0, 2017-05-09
+:toc:
+:icons: font
+
+== Introduction
+
+This document's goal is to demonstrate a method of producing documentation
+with asciidoctor using a small alpine linux docker container.
+
+ * derive documentation from files in git source control
+ * generate multiple output formats from the same source files
+ * integrate document generation into the build and packaging system
+
+[NOTE]
+.This is an example callout
+=================
+
+This is a separate paragraph.
+
+=================
+
+== Example Usage
+
+[source,bash]
+.create a pdf for this document
+----
+[docker-host]$ cd docs
+
+[docker-host]$ docker run -it -v $(pwd):/documents dd asciidoctor-pdf thisdoc.adoc
+----
+
+== Appendix
+
+List of files currently in this repository.
+
+[source,shell]
+.File Listing with tree
+----
+.
+├── Dockerfile
+├── Makefile
+├── add-pkgs
+└── example.adoc
+
+0 directories, 4 files
+----
+

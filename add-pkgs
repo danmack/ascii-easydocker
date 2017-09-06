@@ -1,0 +1,27 @@
+#!/bin/sh
+apk update --no-cache
+
+apk add --no-cache \
+    make gcc ruby ruby-dev ruby-bundler graphviz ruby-nokogiri \
+    unzip findutils which wget python-dev zlib-dev \
+    patch sudo bash libjpeg-turbo libjpeg-turbo-dev \
+    asciidoctor
+
+# openjdk
+
+# ruby gems
+
+cat > Gemfile <<EOF
+source 'https://rubygems.org'
+gem 'asciidoctor'
+gem 'asciidoctor-pdf'
+# or specify the version explicitly
+# gem 'asciidoctor', '1.5.6.1'
+EOF
+
+bundle
+
+echo ""
+echo "add pkg script completed"
+echo ""
+
