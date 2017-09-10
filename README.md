@@ -20,6 +20,13 @@ following:
  3. an example.adoc asciidoctor docutment which the Makefile can
     convert to html and PDF formats
 
+This idea to use a container came from the asciidoctor github
+repository.  I simply switched to a different method of building the
+container and made sure it worked with the current release of
+asciidoctor,and, without having to include JAVA as a dependency. For
+my purposes, this is much cleaner and likely to keep working as
+asciidoctor evolves.
+
 ## How to use these recipes
 
 ### Create docker image on your system

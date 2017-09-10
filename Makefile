@@ -1,4 +1,3 @@
-
 # the name of your source ascii doctor files
 SRC=example.adoc
 
@@ -29,8 +28,3 @@ dockerimg:
 
 clean:
 	rm -f *.pdf *.html
-
-dockerclean:
-	docker rm $(docker ps -aq)
-	docker rmi $(docker images -q)
-
